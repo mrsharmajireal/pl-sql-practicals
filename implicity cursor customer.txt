@@ -1,0 +1,32 @@
+create table customerneha
+(
+cust_id  int primary key,
+name varchar(10),
+age int,
+address varchar(10),
+salary number)
+
+insert into customerneha values(1,'ramesh',23,'virar',2000)
+
+
+insert into customerneha values(2,'ram',25,'vasai',6000);
+
+
+insert into customerneha values(3,'suresh',25,'borivali',8000);
+
+insert into customerneha values(4,'riya',28,'delhi',22000);
+
+
+
+declare
+no_rows number(2);
+begin
+update customerneha
+set salary=salary+10000;
+if sql%notfound then
+dbms_output.put_line('no customer updated');
+elsif  sql%found then
+no_rows:=sql%rowcount;
+dbms_output.put_line(no_rows||'customer updated');
+end if;
+end;

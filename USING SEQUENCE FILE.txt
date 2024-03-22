@@ -1,0 +1,8 @@
+CREATE SEQUENCE seq_1
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 999
+CYCLE
+
+
+Create table class(ID number(10),name varchar(20));

@@ -1,0 +1,26 @@
+ create table employee_master1(
+ emp_no varchar(20),
+ ename varchar(20),
+ city varchar(20));
+
+ insert into employee_master values('e1','sonal','mumbai');
+
+insert into employee_master values('e2','ananya','pune');
+
+insert into employee_master values('e3','sachin','nashik');
+
+
+
+
+ create or replace trigger trigger7
+ after insert
+ ON employee_master1
+ declare
+ x integer;
+ begin
+ select count(*)
+ into x
+ from employee_master1;
+ dbms_output.put_line('insersion successful,There are'||x||'records');
+ end;
+ /

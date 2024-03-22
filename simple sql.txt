@@ -1,0 +1,14 @@
+
+ declare
+ i number(6);
+ fact number:=1;
+ begin
+ i:=&i;
+ while i>0
+ loop
+ fact:=fact*i;
+ i:=i-1;
+ end loop;
+ dbms_output.put_line('factorial is:'||fact);
+ end;
+ /

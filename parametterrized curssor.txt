@@ -1,0 +1,16 @@
+declare
+varroll studentneha.rollno%type;
+varsname studentneha.sname%type;
+id number;
+cursor c3000(sid in number) is select rollno,sname from studentneha
+where rollno=sid;
+begin
+id:=&id;
+open c3000(id);
+loop
+fetch c3000 into varroll, varsname;
+exit when c3000%notfound;
+dbms_output.put_line(varroll||' '||varsname);
+end loop;
+close c3000;
+end;

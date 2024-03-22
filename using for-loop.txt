@@ -1,0 +1,31 @@
+  declare
+  i number(5);
+  fact number(10):=1;
+  begin
+  i:='&i';
+  for m in 1..i
+  loop
+  fact:=fact*m;
+  end loop;
+  dbms_output.put_line('factorial is:'||fact);
+  end;
+  ====================================================================
+PRINT 1 TO 10 NUMBER USING FOR LOOP 
+
+ begin
+ for i in 1..10
+ loop
+ dbms_output.put_line(i);
+ end loop;
+ end;
+ /
+=======================================================================
+PRINT 1 TO 10 NUMBER IN REVERSE ORDER USING FOR-LOOP 
+
+ begin
+ for i in reverse 1...10
+ loop
+ dbms_output.put_line(i);
+ end loop;
+ end;
+ /

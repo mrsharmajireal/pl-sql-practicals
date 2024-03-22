@@ -1,0 +1,26 @@
+
+ 
+ create or replace procedure swap(a in out number,b in out number)
+ as
+ temp number;
+ begin
+ temp:=a;
+ a:=b;
+ b:=temp;
+ end;
+
+
+
+
+declare
+ num1 number;
+ num2 number;
+ begin
+ num1:=&num1;
+ num2:=&num2;
+ dbms_output.put_line('before swapping:');
+ dbms_output.put_line('num1='||num1||''||'num2='||num2);
+ swap(num1,num2);
+ dbms_output.put_line('After swapping:');
+ dbms_output.put_line('num1='||num1||''||'num2='||num2);
+ end;

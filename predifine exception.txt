@@ -1,0 +1,22 @@
+ declare
+ varsname varchar(20);
+ vmarks number;
+ n1 number;
+ rn number;
+ begin
+ select sname into varsname
+ from student8
+ where rollno=rn;
+ dbms_output.put_line('student name:'||varsname);
+ select marks into vmarks
+ from student
+ where rollno=rn;
+ n1:=vmarks/0;
+ dbms_output.put_line(n1);
+ exception
+ when NO_DATA_FOUND then
+ dbms_output.put_line('data not available');
+ when ZERO_DIVIDE THEN
+ dbms_output.put_line('divide by zero');
+ end;
+ /

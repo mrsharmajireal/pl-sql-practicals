@@ -1,0 +1,20 @@
+ create or replace function no(num1 IN number,num2 IN number)
+ return number
+ as
+ ans number;
+ begin
+ ans:=num1+num2;
+ return ans;
+ end;
+
+
+ declare
+ a number;
+ b number;
+ c number;
+ begin
+ a:=&a;
+ b:=&b;
+ c:=no(a,b);
+ dbms_output.put_line('answer is'||''||c);
+ end;

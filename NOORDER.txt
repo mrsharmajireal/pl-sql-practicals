@@ -1,0 +1,38 @@
+*creating simple sequence with cluse like dtart with increment by 
+maxvalue,minvalue,cycle|nocycle,cache|nocache,order|nooeder
+
+create sequence seq1
+increment by 1
+maxvalue 1000
+minvalue 1
+cycle
+cache 20
+order
+
+*simple view sequence value use a select sentence as below:
+
+ SELECT seq1.NEXTVAL FROM dual;
+
+ *to reference the current value of a sequence
+
+ SELECT seq1.currval FROM dual;
+
+
+
+CREATE SEQUENCE seq_1
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 999
+CYCLE
+
+crete table class;
+Create table class(ID number(10),name varchar(20));
+
+*the sql query will be,
+
+insert into class values(seq.1nextval,'aniket');
+insert into class values(seq.1nextval,'ruchita');
+insert into class values(seq.1nextval,'mansasvi');
+insert into class values(seq.1nextval,'swasthik');
+
+select * from class 
