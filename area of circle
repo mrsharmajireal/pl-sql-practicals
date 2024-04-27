@@ -1,0 +1,7 @@
+DECLARE
+    radius NUMBER := 5; -- Change the value of radius as needed
+    area NUMBER;
+BEGIN
+    area := 3.14159 * radius * radius;
+    DBMS_OUTPUT.PUT_LINE('The area of the circle with radius ' || radius || ' is ' || area);
+END;
